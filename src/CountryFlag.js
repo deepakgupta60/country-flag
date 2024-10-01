@@ -5,9 +5,16 @@ const CountryFlag = () => {
 
     useEffect(() => {
         const fetchData = async () => {
-            let response = await fetch("https://xcountries-backend.azurewebsites.net/all");
-            let data = await response.json();
-            setCountry(data)
+            try{
+               let response = await fetch("https://xcountries-backend.azurewebsites.net/all");
+               let data = await response.json();
+               setCountry(data)
+
+           }
+           catch(error)
+           {
+            console.log(error)
+           }
         }
         fetchData()
     }, [])
