@@ -12,10 +12,12 @@ const CountryFlag = () => {
         fetchData()
     }, [])
 
-    const CountryData = ({ name, flag, abbr }) => {
+    const CountryData = ({ name, flag }) => {
 
         return (
             <>
+
+           
                 <div style={{
 
                     height: "200px",
@@ -39,7 +41,7 @@ const CountryFlag = () => {
     }
     return (
         <>
-
+ <h1>List of Countries</h1>
             <div style={{ display: "flex", flexWrap: "wrap", margin: "auto", width: "1920px" }}>
 
                 {
